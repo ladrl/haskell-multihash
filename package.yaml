@@ -1,0 +1,50 @@
+name:                multihash
+version:             0.1.4
+github:              ladrl/haskell-multihash
+license:             BSD3
+author:              Luke Hoersten, Lukas Lädrach
+maintainer:          luke@hoersten.org, laedracl@gmail.com
+copyright:           2015 Luke Hoersten, 2021 Lukas Lädrach
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description: |
+  Multihash is a protocol for encoding the hash algorithm
+  and digest length at the start of the digest.
+  More information available at the official
+  <https://github.com/jbenet/multihash/ multihash github>.
+  .
+  Base32 encoding and file checking still to be added.
+  .
+
+dependencies:
+ - base              
+ - bytestring   
+ - base64-bytestring
+ - base58-bytestring
+ - attoparsec
+ - cryptonite
+ - memory       
+ - io-streams   
+ - hex
+
+library:
+  source-dirs: src
+
+executables:
+  multihash:
+    main: Main.hs
+    source-dirs: main
+    dependencies: 
+      - multihash
+      - optparse-applicative
+

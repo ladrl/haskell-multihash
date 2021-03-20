@@ -1,5 +1,5 @@
-resolver: lts-10.3
+resolver: lts-17.6
 packages:
 - '.'
 extra-deps:
-- base58-bytestring-0.1.0
+- hex-0.2.0@sha256:197d2561d2e216c4ead035b4911dabc6e678ac6257cb71b64e324c822f6f9f5a,726
